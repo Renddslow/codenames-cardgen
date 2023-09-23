@@ -240,4 +240,8 @@ const createLight = (color, ctx) => {
   document.querySelector(".copy").addEventListener("click", async () => {
     await navigator.clipboard.writeText(window.location.href);
   });
+
+  document.querySelector(".create").addEventListener("click", () => {
+    window.location.reload();
+  });
 })();
