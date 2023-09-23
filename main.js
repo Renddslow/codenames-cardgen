@@ -235,5 +235,9 @@ const createLight = (color, ctx) => {
   });
 
   createLight(blueHasExtra ? "blue" : "red", ctx);
-  document.getElementById("url").innerText = window.location.href;
+  document.getElementById("url").value = window.location.href;
+
+  document.querySelector("button").addEventListener("click", async () => {
+    await navigator.clipboard.writeText(window.location.href);
+  });
 })();

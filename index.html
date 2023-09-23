@@ -54,13 +54,27 @@
         border: 2px solid #000;
         max-width: 640px;
         margin: 24px auto 0;
+        display: block;
+        font-size: 16px;
+      }
+
+      button {
+        display: block;
+        padding: 12px;
+        background: #cecece;
+        border-radius: 8px;
+        border: 2px solid #000;
+        font-size: 16px;
+        cursor: pointer;
+        margin: 0 auto;
       }
     </style>
   </head>
   <body>
     <div class="wrapper">
       <canvas id="canvas" width="360" height="280"></canvas>
-      <div id="url"></div>
+      <input id="url" />
+      <button type="button">Copy Link</button>
     </div>
     <script src="main.js"></script>
   </body>
