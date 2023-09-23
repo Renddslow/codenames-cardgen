@@ -242,6 +242,6 @@ const createLight = (color, ctx) => {
   });
 
   document.querySelector(".create").addEventListener("click", () => {
-    window.location.reload();
+    window.location.href = "/";
   });
 })();
