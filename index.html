@@ -68,13 +68,29 @@
         cursor: pointer;
         margin: 0 auto;
       }
+
+      button.create {
+        background: #f2881b;
+        color: #fff;
+      }
+
+      .row {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, max-content));
+        margin: 12px auto 0;
+        max-width: max-content;
+        grid-gap: 12px;
+      }
     </style>
   </head>
   <body>
     <div class="wrapper">
       <canvas id="canvas" width="360" height="280"></canvas>
       <input id="url" />
-      <button type="button">Copy Link</button>
+      <div class="row">
+        <button type="button" class="copy">Copy Link</button>
+        <button type="button" class="create">Create New Card</button>
+      </div>
     </div>
     <script src="main.js"></script>
   </body>

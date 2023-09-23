@@ -237,7 +237,7 @@ const createLight = (color, ctx) => {
   createLight(blueHasExtra ? "blue" : "red", ctx);
   document.getElementById("url").value = window.location.href;
 
-  document.querySelector("button").addEventListener("click", async () => {
+  document.querySelector(".copy").addEventListener("click", async () => {
     await navigator.clipboard.writeText(window.location.href);
   });
 })();
