@@ -5,13 +5,63 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        height: 100%;
+      }
+
+      body {
+        background: linear-gradient(#5a0034, #f2881b);
+        height: 100%;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+      }
+
       #canvas {
+        --shadow-color: 0deg 0% 0%;
         border-radius: 8px;
+        border: 4px solid #000;
+        box-shadow:
+          0px 0.6px 0.9px hsl(var(--shadow-color) / 0.01),
+          0px 3.9px 5.6px -0.1px hsl(var(--shadow-color) / 0.03),
+          0.1px 6.9px 9.9px -0.1px hsl(var(--shadow-color) / 0.04),
+          0.1px 10.5px 15px -0.2px hsl(var(--shadow-color) / 0.06),
+          0.1px 15.6px 22.3px -0.3px hsl(var(--shadow-color) / 0.07),
+          0.2px 23.1px 33.1px -0.4px hsl(var(--shadow-color) / 0.09),
+          0.3px 34px 48.7px -0.4px hsl(var(--shadow-color) / 0.1);
+        margin: 0 auto;
+        display: block;
+      }
+
+      .wrapper {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      #url {
+        width: 100%;
+        overflow-x: auto;
+        text-align: left;
+        padding: 12px;
+        background: #cecece;
+        border-radius: 8px;
+        border: 2px solid #000;
+        max-width: 640px;
+        margin: 24px auto 0;
       }
     </style>
   </head>
   <body>
-    <canvas id="canvas" width="360" height="280"></canvas>
+    <div class="wrapper">
+      <canvas id="canvas" width="360" height="280"></canvas>
+      <div id="url"></div>
+    </div>
     <script src="/main.js"></script>
   </body>
 </html>
